@@ -1,9 +1,8 @@
 from pytest import fixture
-from src.factory import create_app
-
+from app.factory import create_app
 
 @fixture
-def client1():
+def client():
     return create_app().test_client()
 
 
@@ -14,10 +13,10 @@ def test_status_code(client):
 
 def test_hello_world(client):
     response = client.get('/')
-    assert b'Hello, Zahara!' in response.data
+    assert b'Hello, Sebastian!' in response.data
 
 
-def test_route_des(client):
+def test_route_destination(client):
     response = client.get('/api/v1/countries/destination')
     assert b'United Kingdom' in response.data
     assert b'Spain' in response.data
@@ -25,7 +24,7 @@ def test_route_des(client):
     assert b'Ireland' in response.data
 
 
-def test_route_sou(client):
+def test_route_source(client):
     response = client.get('/api/v1/countries/source')
     assert b'United Kingdom' in response.data
     assert b'Spain' not in response.data
