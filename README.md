@@ -24,9 +24,9 @@ An in-depth paragraph about your project and overview of use.
 
 To Start the app
 ```
-$ cd travelex-flask-aws-docker &&
+$ cd travelex-app &&
 $ export FLASK_APP=application
-$ flask run
+$ python -m flask run
 ```
 
 To Stop the app
@@ -43,20 +43,43 @@ $ python -m pytest -v
 Ensure docker is running in the background then
 
 ```
-$ docker build -t niceseb/travelex-flask .
+$ docker build -t niceseb/travelex-app .
 ```
 
 
 Run the containerize app
 ```
-$ docker run -it  --rm -p 5000:5000 niceseb/travelex-flask:latest
+$ docker run -it  --rm -p 5000:5000 niceseb/travelex-app:latest
 ```
 
-To view in browser:
+### To view in browser:
 ```
 http://localhost:5000
 ```
 
+### Beanstalk Init
+```
+eb init -p python-3.6 travelex-env --region eu-west-2
+```
+
+then again to manually select
+```
+eb init
+```
+
+Create an environment and deploy with eb create
+```
+eb create travelex-env
+```
+
+### To zip bundle for AWS
+```
+$ git archive -v -o travelex-app.zip --format=zip HEAD
+```
+
+### Deploy to AWS
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_dockerpreconfig.walkthrough.html
 
 ## Help
 

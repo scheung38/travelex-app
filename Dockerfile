@@ -4,9 +4,10 @@ LABEL maintainer="sebastian_cheung@live.com"
 
 USER root
 
+COPY . /app
+
 WORKDIR /app
 
-ADD . /app
 
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
