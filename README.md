@@ -93,6 +93,10 @@ Any advise for common problems or issues.
 command to run if program contains helper info
 ```
 
+## ECS cluster can be monitored continuously using CloudWatch Metrics
+
+https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html
+
 ## Authors
 
 Contributors names and contact info
