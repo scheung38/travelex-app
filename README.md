@@ -1,11 +1,11 @@
 # Project Title
 
-Simple Travelex Demo
+Travelex API Demo
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
-
+This is a Python-Flask API backend demo, with pytest unittesting and
+Dockerized, and deployed to AWS Beanstalk
 
 ### Installing MacOSX
 
@@ -57,12 +57,12 @@ $ docker run -it  --rm -p 5000:5000 niceseb/travelex-app:latest
 http://localhost:5000
 ```
 
-### Beanstalk Init
+### AWS Beanstalk Steps to Deploy
 ```
 eb init -p python-3.6 travelex-env --region eu-west-2
 ```
 
-then again to manually select
+then again to manually select or override
 ```
 eb init
 ```
