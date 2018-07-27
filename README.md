@@ -62,7 +62,8 @@ http://localhost:5000
 eb init -p python-3.6 travelex-env --region eu-west-2
 ```
 
-then again to manually select or override settings
+then again to manually select or override settings, creating
+.elasticbeanstalk/config.yml file
 ```
 eb init
 ```
