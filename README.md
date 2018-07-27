@@ -62,7 +62,7 @@ http://localhost:5000
 eb init -p python-3.6 travelex-env --region eu-west-2
 ```
 
-then again to manually select or override
+then again to manually select or override settings
 ```
 eb init
 ```
@@ -79,6 +79,10 @@ $ git archive -v -o travelex-app.zip --format=zip HEAD
 
 ### Deploy to AWS
 
+```
+$ eb deploy
+```
+
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_dockerpreconfig.walkthrough.html
 
 ## Help
@@ -92,7 +96,7 @@ command to run if program contains helper info
 
 Contributors names and contact info
 
-ex. Sebastian Cheung
+Sebastian Cheung
 
 
 
